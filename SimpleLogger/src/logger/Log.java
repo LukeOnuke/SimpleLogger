@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logger;
 
 import java.io.File;
@@ -14,7 +9,8 @@ import java.util.Arrays;
 import java.util.Date;
 
 /**
- *
+ *  Class containing the methods for logging
+ * 
  * @author lukak
  */
 public class Log {
@@ -82,10 +78,10 @@ public class Log {
         String date = simpleDateFormat.format(new Date());
 
         String filename = date + "log.xmlog";
-        File file = new File("log\\" + filename);
+        File file = new File("log" + getFileSeperator() + filename);
         filepath = file; //Set the filepath global variable
         //Check if logs\ doesnt exist and create the dir if it doesnt exist
-        File test = new File("log\\");
+        File test = new File("log" + getFileSeperator());
         if (!test.exists()) {
             test.mkdir();
         }
@@ -157,4 +153,7 @@ public class Log {
         return (string + System.lineSeparator()).getBytes();
     }
 
+    private static String getFileSeperator(){
+        return "\\";
+    }
 }

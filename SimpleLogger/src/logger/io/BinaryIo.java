@@ -8,9 +8,6 @@ import java.nio.file.Files;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * Class containing the read, write and hash methods used for binary input and output
  *
